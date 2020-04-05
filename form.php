@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>ThE FoRm</title>
+		<title>HOME</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
@@ -43,7 +43,7 @@
                         $email=$values['email'];
                     }
                     ?>
-					Email:<input name="email" value="<?php print $email?>" class="<?php print $ERROR?>" placeholder="email@yandex.ru">
+					Email:<input name="email" value="<?php print $email?>" class="<?php print $ERROR?>" placeholder="email@mail.ru">
 				</div>
                 </br>
 				<div id="BIRTHYEAR">
@@ -159,7 +159,7 @@
                         }
                         ?>
                         <p class="<?php print $ERROR?>" >
-                            <textarea cols="45" name="biography" placeholder="Here is your brief biography..."><?php if($values['biography']){print $values['biography'];} ?></textarea>
+                            <textarea cols="45" name="biography" placeholder="Here is your biography"><?php if($values['biography']){print $values['biography'];} ?></textarea>
                         </p>
                     </div>
                 </br>
