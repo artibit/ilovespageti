@@ -2,7 +2,7 @@
 	align-content: center;
 	border:10px;
 	border-radius:5px;
-	background-color:#A9A9A9;
+	background-color:#52cc00;
 	width:450px;
 	height:700px;
 	border-color:black;
@@ -14,12 +14,8 @@ body{
 	background-image:url("iNH9HZTSN.jpg");
 }
 .error{
-	border: 2px solid red;
+	background-color:red;
 }
 #events{
-	border-radius:10px;
-	border-color:black;
-	background-color:blue;
 	text-align:center;
-	color:white;
 }
