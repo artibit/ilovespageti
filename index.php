@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $values = array();
     if (!empty($_COOKIE['save'])) {
         setcookie('save', '', 100000);
-        $messages['save'] = 'Спасибо, результаты сохранены.';
+        $messages['save'] = 'РЎРїР°СЃРёР±Рѕ, СЂРµР·СѓР»СЊС‚Р°С‚С‹ СЃРѕС…СЂР°РЅРµРЅС‹.';
     }
 $errors = FALSE;
 $flag=FALSE;
@@ -22,53 +22,53 @@ $sverh_separated='';
     if ($errors['name']) {
         if($_COOKIE['name_error']=='none'){
             setcookie('name_error','',100000);
-            $messages['name'] = '<div class="error">Заполните имя.</div>';
+            $messages['name'] = '<div class="error">Р—Р°РїРѕР»РЅРёС‚Рµ РёРјСЏ.</div>';
     }
     if($_COOKIE['name_error']=='Unacceptable symbols'){
             setcookie('name_error','',100000);
-            $messages['name'] = '<div class="error">Недопустимые символы в имени:а-я,А-Я,0-9,\ - _ </div>';
+            $messages['name'] = '<div class="error">РќРµРґРѕРїСѓСЃС‚РёРјС‹Рµ СЃРёРјРІРѕР»С‹ РІ РёРјРµРЅРё:Р°-СЏ,Рђ-РЇ,0-9,\ - _ </div>';
     }
 }
     if ($errors['email']) {
         if($_COOKIE['email_error']=='none'){
             setcookie('email_error','',100000);
-            $messages['email'] = '<div class="error">Укажите почту.</div>';
+            $messages['email'] = '<div class="error">РЈРєР°Р¶РёС‚Рµ РїРѕС‡С‚Сѓ.</div>';
         }
         if($_COOKIE['email_error']=='invalid address'){
             setcookie('email_error','',100000);
-            $messages['email'] = '<div class="error">Почта указана некорректно.Пример:email@yandex.ru</div>';
+            $messages['email'] = '<div class="error">РџРѕС‡С‚Р° СѓРєР°Р·Р°РЅР° РЅРµРєРѕСЂСЂРµРєС‚РЅРѕ.РџСЂРёРјРµСЂ:email@yandex.ru</div>';
         }
     }
     if($errors['year']){
         setcookie('year_error','',100000);
-        $messages['year'] = '<div class="error">Укажите год рождения</div>';
+        $messages['year'] = '<div class="error">РЈРєР°Р¶РёС‚Рµ РіРѕРґ СЂРѕР¶РґРµРЅРёСЏ</div>';
 }
     if($errors['sex']){
             setcookie('sex_error','',100000);
-            $messages['sex'] = '<div class="error">Укажите пол</div>';
+            $messages['sex'] = '<div class="error">РЈРєР°Р¶РёС‚Рµ РїРѕР»</div>';
     }
     if ($errors['limbs']) {
         setcookie('limbs_error','',100000);
-        $messages['limbs'] = '<div class="error">Укажите количество конечностей</div>';
+        $messages['limbs'] = '<div class="error">РЈРєР°Р¶РёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РєРѕРЅРµС‡РЅРѕСЃС‚РµР№</div>';
     }
     if($errors['sverh']){
         if($_COOKIE['sverh_error']=="none"){
             setcookie('sverh_error','',100000);
-            $messages['sverh'] = '<div class="error">Выберите способности</div>';
+            $messages['sverh'] = '<div class="error">Р’С‹Р±РµСЂРёС‚Рµ СЃРїРѕСЃРѕР±РЅРѕСЃС‚Рё</div>';
         }
         if($_COOKIE['sverh_error']=="noneselected"){
             setcookie('sverh_error','',100000);
-            $messages['sverh'] = '<div class="error">Вы создали противоречие самому себе.Уберите "None" и побробуйте ещё раз.</div>';
+            $messages['sverh'] = '<div class="error">Р’С‹ СЃРѕР·РґР°Р»Рё РїСЂРѕС‚РёРІРѕСЂРµС‡РёРµ СЃР°РјРѕРјСѓ СЃРµР±Рµ.РЈР±РµСЂРёС‚Рµ "None" Рё РїРѕР±СЂРѕР±СѓР№С‚Рµ РµС‰С‘ СЂР°Р·.</div>';
         }
     }
     if ($errors['biography']) {
             setcookie('biography_error','',100000);
-            $messages['biography'] = '<div class="error">Заполните биографию</div>';
+            $messages['biography'] = '<div class="error">Р—Р°РїРѕР»РЅРёС‚Рµ Р±РёРѕРіСЂР°С„РёСЋ</div>';
 
     }
     if($errors['consent']){
         setcookie('consent_error','',100000);
-        $messages['consent'] = '<div class="error">Вы не согласились с контрактом</div>';
+        $messages['consent'] = '<div class="error">Р’С‹ РЅРµ СЃРѕРіР»Р°СЃРёР»РёСЃСЊ СЃ РєРѕРЅС‚СЂР°РєС‚РѕРј</div>';
     }
 
     $values['name'] = empty($_COOKIE['name_value']) ? '' : $_COOKIE['name_value'];
@@ -82,7 +82,7 @@ $sverh_separated='';
 include('form.php');
 }
 else {
-    /*Проверяем на ошибки*/
+    /*РџСЂРѕРІРµСЂСЏРµРј РЅР° РѕС€РёР±РєРё*/
     $errors = FALSE;
     if (empty($_POST['name'])) {
         setcookie('name_error', 'none', time() + 24 * 60 * 60);
@@ -177,7 +177,7 @@ else {
         setcookie('sex_error', '', 100000);setcookie('consent_error', '', 100000);
     }
 
-/*запись в бд*/
+/*Р·Р°РїРёСЃСЊ РІ Р±Рґ*/
     if(!empty($_POST['sverh'])){
         $sverh_mass=$_POST['sverh'];
         for($w=0;$w<count($sverh_mass);$w++){
