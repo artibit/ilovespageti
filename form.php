@@ -8,7 +8,7 @@
 	<body>
 		<div id="Form">
 			<div id="events">
-				<p>Please fill out the form</p>
+				<p>form</p>
 			</div>
 			<form method="post" action="index.php" name="contract" >
                 <?php
@@ -171,12 +171,12 @@
                         $ERROR='error';
                     }
                     ?>
-                    <span class="<?php print $ERROR?>" >Do you agree that you are selling your soul to the devil?
+                    <span class="<?php print $ERROR?>" >You want go home?
 					    <input type="checkbox" name="consent"  value="yes" <?php if($values['consent']=='yes') {print'checked';}?> >
                     </span>
                 </div>
                 </br>
-				<input type="submit" value="Отправить">
+				<input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ">
 			</form>
 		</div>	
 	</body>
